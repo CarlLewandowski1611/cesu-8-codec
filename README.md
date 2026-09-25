@@ -28,3 +28,10 @@ The module exports four functions:
 - `decode(input: Uint8Array): string` — decode CESU-8 bytes to a string.
 - `encodeString(input: string): string` — encode and return a space-separated uppercase hex string.
 - `decodeString(input: Uint8Array): string` — alias for `decode`.
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
