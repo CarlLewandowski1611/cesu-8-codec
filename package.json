@@ -1,6 +1,6 @@
 {
   "name": "cesu-8-codec",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Encodes and decodes compatibility encoding for supplementary characters as used by Oracle and Java modifications.",
   "type": "module",
   "main": "src/index.js",
